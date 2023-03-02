@@ -1,0 +1,432 @@
+//form.html
+
+<html>
+  <head>
+    <title>webpage design</title>
+    <link rel="stylesheet" href="aravind1.css" />
+    <script type="text/javascript" src="sathish.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <div class="logo">
+            <h1>EkGoN</h1>
+          </div>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="display.php">DATAS</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">DOWNLOAD</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <input class="search1" type="search" placeholder="TYPE TEXT HERE" />
+          <button class="button">Search</button>
+        </div>
+      </div>
+      <form  action="conect.php" method="post" enctype="multipart/form-data"> 
+        <div class="form">
+          <h2>REGISTER HERE</h2>
+          <input type="email" name="email" placeholder="TYPE EMAIL HERE" id="email"/>
+          <div id="as"></div>
+
+                <input type="password" name="password1" placeholder="TYPE PASSWORD HERE" id="password" >
+
+                <input type="password" name="password2" placeholder="RETYPE PASSWORD HERE" id="confirmpassword" >
+
+                <input type="file" class='file' name="file" >
+                
+                <input type="file" name="image[]" multiple >
+
+          <button class="btnn" type="sumbit" name="sumbit" onclick=" return checkPassword()">
+          REGISTER
+          </button>
+        </div>
+      </form>
+    </div>
+    
+  </body>
+
+</html>
+
+
+//css
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 23px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.search1{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.button{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.button:hover{
+    color: #000;
+}
+
+.button:focus{
+    outline: none;
+}
+
+.search1:focus{
+    outline: none;
+}
+
+
+
+.form{
+    width: 250px;
+    height: 400PX;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    margin-left:800px;
+    margin-top: 300px;
+    padding: 25px;
+}
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.form #a{
+    color:white;
+    
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+.btnn a{
+    text-decoration:none;
+    color:black;
+
+}
+
+.btnn a:hover{
+
+    color:white;
+    
+
+}
+.para
+{
+    width:240px;
+    height:auto;
+    margin-left:-10px;
+    
+    color:#fff;
+}
+.link
+{
+    margin-left:60px;
+    padding:auto;
+    text-decoration:none;
+    font-family:arial;
+    font-weight: bold;
+    color:rgb(207, 149, 41);
+    padding-left:15px;
+}
+
+.link:hover{
+    color: bisque;
+}
+
+.file{
+    color:white;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    
+    
+
+}
+
+//connect.php
+
+<?php
+
+    $email=$_POST['email'];
+    $password=$_POST['password1'];
+    $cnfrmpassword=$_POST['password2'];
+
+    $image=$_FILES['file'];
+    
+    $imagefilename=$image['name'];
+  
+    $imagefileerror=$image['error'];
+   
+    $imagefiletemp=$image['tmp_name']; 
+  
+    $filename_separate=explode('.',$imagefilename);
+   
+    $file_extension=strtolower(end($filename_separate));
+    
+    $extension=array('jpeg','jpg','png');
+    if(in_array($file_extension,$extension)){
+        $upload_image='images/'.$imagefilename;
+        move_uploaded_file($imagefiletemp,$upload_image);       
+    }
+
+    $imagecount=count($_FILES['image']['name']);
+    for($i=0;$i<$imagecount;$i++)
+    {
+        $imagename=$_FILES['image']['name'][$i];
+        $imagetempname=$_FILES['image']['tmp_name'][$i];
+        $targetpath="./upload/".$imagename;
+        if(move_uploaded_file($imagetempname,$targetpath));
+        {
+            $con=mysqli_connect("127.0.0.1","sathish","sathish2023","sathish");
+            $sql="INSERT INTO REG(email,password1,password2,images,mul)values('$email','$password','$cnfrmpassword',' $upload_image','$imagename') ";
+        }
+    }
+
+$con=mysqli_connect("127.0.0.1","sathish","sathish2023","sathish");
+$sql="INSERT INTO REG(email,password1,password2,images,mul)values('$email','$password','$cnfrmpassword',' $upload_image','$targetpath') ";
+$r=mysqli_query($con,$sql);
+if($r)
+{
+    echo "STUDENTS DETAILS ADDED SUCCESSFULLY";
+}
+else{
+    echo "STUDENTS DETAILS NOT ADDED ";
+}
+
+?>
+
+
+//display.php
+
+
+<html>
+    <head>
+        <title>Display data</title>
+        <style type="text/css">
+            body{ 
+                height:100vh;
+                display:grid;
+                place-items:center;
+                background: url(nature.jpg);
+
+            }
+            table{
+                
+                width:600px;
+                box-shadow: -1x 12px 12px -6px rgba(0,0,0,0.5);
+
+            }
+
+            table, td, td{
+                padding:20px;
+                border:1px solid lightgray;
+                border-collapse:collapse;
+                text-align:center;
+
+            }
+
+            td{
+                font-size:18px;
+
+            }
+            th{
+                background-color:black;
+                color:white;
+            }
+            tr:nth-child(odd){
+                background-color:grey;
+            }
+            tr:nth-child(odd):hover{
+                background-color:dodgerblue;
+                color:white;
+                transform:scale(1.5);
+                transition: transform 300ms ease-in;
+            }
+            tr:nth-child(even){
+                background-color:#ededed;
+            }
+            tr:nth-child(even):hover{
+                background-color:lightgray;
+                color:black;
+                transform:scale(1.5);
+                transition: transform 300ms ease-in;
+            }
+
+
+        </style>
+    </head>
+   
+    
+    <body>
+        <table border=1 cellpadding=5 cellspacing=15>
+            <tr>
+                <th>EMAIL</th>
+                <th>PASSWORD</th>
+                <th>CONFIRMPASSWORD</th>
+                <th>IMAGE</th>
+                <th>MULFILE</th>
+            </tr>
+            <?php
+                $con=mysqli_connect("127.0.0.1",'sathish','sathish2023','sathish');
+                $sql="SELECT * from REG";
+                $result=$con->query($sql);
+                if($result->num_rows>0){
+                while($row=$result->fetch_assoc()){
+                    $email=$row['email'];
+                    $password=$row['password1'];
+                    $cnfrmpass=$row['password2'];
+                    $image=$row['images'];
+                    echo '<tr>
+                    <td>'.$email.'</td>
+                    <td>'.$password.'</td>
+                    <td>'.$cnfrmpass.'</td>
+                    <td><img width="100px" height="100px" src= ".$image."/></td>
+                    <td><img  src="upload/" width="100px" height="100px"><img  src="upload/" width="100px" height="100px"></td>
+
+                    </tr>';
+                   
+                }
+                }
+            ?>
+        </table>
+    </body>
+</html>
+
+

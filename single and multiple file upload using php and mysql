@@ -316,6 +316,7 @@ ul li a:hover{
         {
             $con=mysqli_connect("127.0.0.1","sathish","sathish2023","sathish");
             $sql="INSERT INTO REG(email,password1,password2,images,mul)values('$email','$password','$cnfrmpassword',' $upload_image','$imagename') ";
+            $r=mysqli_query($con,$sql);
         }
     }
 

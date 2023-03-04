@@ -413,12 +413,13 @@ else{
                     $password=$row['password1'];
                     $cnfrmpass=$row['password2'];
                     $image=$row['images'];
+                    $img=$row['mul']
                     echo '<tr>
                     <td>'.$email.'</td>
                     <td>'.$password.'</td>
                     <td>'.$cnfrmpass.'</td>
-                    <td><img width="100px" height="100px" src= ".$image."/></td>
-                    <td><img  src="upload/" width="100px" height="100px"><img  src="upload/" width="100px" height="100px"></td>
+                    <td><img width="100px" height="100px" src= "'.$image.'"/></td>
+                    <td><img  src="upload/'.$img.'" width="100px" height="100px"></td>
 
                     </tr>';
                    
